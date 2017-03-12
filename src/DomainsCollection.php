@@ -81,7 +81,7 @@ class DomainsCollection
 	public function each($callback = null)
 	{
 		if ($callback === null || !is_callable($callback)) {
-			return $this->getDomains();
+			return $this->domains;
 		}
 
 		foreach($this->domains as $domain) {
