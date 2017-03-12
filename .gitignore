@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+/vendor/
+.gitignore
+.idea/
+examples/
+index.php
+vendor/autoload.php
+vendor/composer/

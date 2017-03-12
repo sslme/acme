@@ -1,0 +1,16 @@
+{
+    "name": "sslme/acme",
+    "description": "acme client for Let`sEncrypt",
+    "authors": [
+        {
+            "name": "Vitaly Dubovik",
+            "email": "personal.vitaly@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sslme\\Acme\\": "src"
+        }
+    }
+}
