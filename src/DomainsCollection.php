@@ -66,6 +66,40 @@ class DomainsCollection
 	}
 
 	/**
+	 * @param $domain
+	 * @return mixed|Domain
+	 */
+	public function get($domain)
+	{
+		return $this->domains[$domain];
+	}
+
+	/**
+	 * @param null $callback
+	 * @return array|Domain[]
+	 */
+	public function each($callback = null)
+	{
+		if ($callback === null || !is_callable($callback)) {
+			return $this->getDomains();
+		}
+
+		foreach($this->domains as $domain) {
+			$callback($domain);
+		}
+
+		return $this->domains;
+	}
+
+	/**
+	 * @return array|Domain[]
+	 */
+	public function getDomains()
+	{
+		return $this->domains;
+	}
+
+	/**
 	 * @throws Exception
 	 */
 	public function verify()
