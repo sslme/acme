@@ -61,8 +61,8 @@ class DomainsCollection
 		$this->acme->log(PHP_EOL);
 		$this->acme->log(PHP_EOL);
 
-		$this->trigger('signed:complete', $domains);
-		return $domains;
+		$this->trigger('signed:complete', $this);
+		return $this;
 	}
 
 	/**
